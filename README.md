@@ -1,2 +1,2 @@
 # esbuild-ts-to-js
-An Esbuild configuration that convert typescript to javascript.
+An Esbuild quick setup that convert typescript to javascript.
