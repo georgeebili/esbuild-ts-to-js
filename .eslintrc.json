@@ -58,6 +58,6 @@
         // disallow the unary operators ++ and --
         "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }]
     },
-    "ignorePatterns": ["public/", "dist/", "bin/builds.mjs", "bin/devBuilds.js"] // Avoid linting on the dist folder and, ironically, this file too
+    "ignorePatterns": ["public/", "dist/", "bin/"] // Avoid linting on the dist folder and, ironically, this file too
 
 }
