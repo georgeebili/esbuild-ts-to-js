@@ -1,0 +1,63 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2021, // Allows for the parsing of modern ECMAScript features
+        "sourceType": "module" // Allows for the use of imports
+      },
+    "extends": [
+        "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+        "plugin:prettier/recommended"
+    ],
+    "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto",
+            "tabWidth": 4,
+            "trailingComma": "es5",
+            "arrowParens": "always",
+            "printWidth": 120,
+            "semi": true,
+            "singleQuote": true
+          }
+        ],
+    
+        // disallow else after a return in an if
+        "no-else-return": ["error", { "allowElseIf": false }],
+    
+        // disallow use of assignment in return statement
+        "no-return-assign": ["error", "always"],
+    
+        // Prefer destructuring from arrays and objects
+        "prefer-destructuring": [
+          "error",
+          {
+            "VariableDeclarator": {
+              "array": false,
+              "object": true
+            },
+            "AssignmentExpression": {
+              "array": true,
+              "object": false
+            }
+          },
+          {
+            "enforceForRenamedProperties": false
+          }
+        ],
+    
+        // disallow unnecessary constructor
+        "no-useless-constructor": "error",
+    
+        // disallow use of console
+        //"no-console": "warn",
+    
+        // disallow the unary operators ++ and --
+        "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }]
+    },
+    "ignorePatterns": ["public/", "dist/", "bin/builds.mjs", "bin/devBuilds.js"] // Avoid linting on the dist folder and, ironically, this file too
+
+}

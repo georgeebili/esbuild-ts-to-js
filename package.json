@@ -1,11 +1,16 @@
 {
   "name": "esbuild-ts-to-js",
   "version": "1.0.0",
-  "description": "An Esbuild setup that convert typescript to javascript",
+  "description": "An Esbuild setup that convert and minify typescript to javascript",
+  "engines": {
+    "node": ">=14"
+  },
+  "type": "module",
   "main": "src/index.ts",
   "module": "src/index.ts",
   "scripts": {
-    "build": "node ./bin/builds.mjs"
+    "build": "node ./bin/builds.mjs",
+    "dev": "node ./bin/devBuilds.mjs"
   },
   "repository": {
     "type": "git",
@@ -26,8 +31,12 @@
   },
   "homepage": "https://github.com/georgeebili/esbuild-ts-to-js#readme",
   "devDependencies": {
-    "esbuild": "^0.14.36",
-    "prettier": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "esbuild": "^0.14.39",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "typescript": "^4.6.3"
   }
 }

@@ -1,5 +1,5 @@
-const helloWorld = (name: string) => {
-  console.log(`Hi ${name}!`);
-};
+function intro(name: string) {
+    console.log(`Hello ${name}!`);
+}
 
-helloWorld('George Ebili');
+intro('George Ebili');
