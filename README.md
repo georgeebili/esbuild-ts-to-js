@@ -7,6 +7,7 @@ This project contains:
 
   - [Typescript](https://www.typescriptlang.org/)
   - Eslint
+  - Prettier
   - [ESBuild](https://esbuild.github.io/)
 
 
