@@ -1,4 +1,5 @@
 # esbuild-ts-to-js
+
 An Esbuild quick setup that convert typescript to javascript.
 
 This project contains:
@@ -9,7 +10,6 @@ This project contains:
   - Eslint
   - Prettier
   - [ESBuild](https://esbuild.github.io/)
-
 
 ## How to start
 
@@ -22,14 +22,15 @@ npm install
 ```
 
 ## Usage
+
 If you have more than one typescript file and there are all connected to each other, you can put them inside the `src` folder and import them into
 the `index.ts` file before running build.
 
 To build the files, you have two defined scripts:
 
 - `npm run build`: Will build to the production directory (`/dist`).
-- `npm run dev`: To compile and build custom typescript file to your custom directory, if defined in the `devBuilds.mjs` file, look at `bin/devBuilds.mjs`.
+- `npm run dev`: Compile any custom typescript file in the `src/` directory into javascript. Simply add this comment:`// <I WANT TO BE COMPILED>` in the typescript file you want to convert to JS.
 
 ## Note
-By default, the output from the build command(`npm run build`) is set to the `dist` folder (check `dist/index.js`). While for the output from the dev command(`npm run dev`), check the custom folder you specify in the  `devBuilds.mjs`
 
+By default, the output from the build command(`npm run build`) is set to the `dist` folder (check `dist/index.js`). While for the output from the dev command(`npm run dev`), check the directory of the targeted typescript file.
