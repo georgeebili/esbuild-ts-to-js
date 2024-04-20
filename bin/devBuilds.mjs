@@ -42,7 +42,7 @@ if (foundFiles.length > 0) {
             bundle: true,
             minify: true,
             sourcemap: false,
-            watch: false,
+            //watch: false,
             outdir: fileDirectory, // the output folder of the compiled js file
             target: 'esnext', // the js version
             entryPoints: [file], // file that will be compiled, converted and minified to js
